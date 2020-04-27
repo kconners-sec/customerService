@@ -1,0 +1,24 @@
+{
+  "name": "customerservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kconners-sec/customerService.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kconners-sec/customerService/issues"
+  },
+  "homepage": "https://github.com/kconners-sec/customerService#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "requirejs": "^2.3.6"
+  }
+}
