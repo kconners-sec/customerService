@@ -6,7 +6,7 @@ const dbName = 'client_data';
 module.exports.pool = mariadb.createPool({
     //host     : '192.168.99.100',
     host     : '127.0.0.1',
-    port     : '3355',
+    port     : '3385',
     user     : 'root',
     password : 'Password1*',
     connectionLimit: 5
@@ -14,7 +14,7 @@ module.exports.pool = mariadb.createPool({
 module.exports.pooldb = mariadb.createPool({
     //host     : '192.168.99.100',
     host     : '127.0.0.1',
-    port     : '3355',
+    port     : '3385',
     user     : 'root',
     password : 'Password1*',
     connectionLimit: 5,
@@ -24,7 +24,7 @@ module.exports.pooldb = mariadb.createPool({
 module.exports.createDB = async function(){
     setTimeout(hi,15000);
     setTimeout(Connect,15000);
-    setTimeout(addTable,15000);
+  //  setTimeout(addTable,15000);
     
 }
 function hi(){
@@ -91,8 +91,10 @@ async function Connect(){
     let conn;
     try {
       conn = await module.exports.pool.getConnection();
-      const rows = await conn.query("CREATE DATABASE `client_data`");
+      const rows = await conn.query("select 'Hello'");
+      //const rows = await conn.query("CREATE DATABASE `client_data`");
     } catch (err) {
+      console.log(err);
       throw err;
     } finally {
       if (conn) return conn.end();
